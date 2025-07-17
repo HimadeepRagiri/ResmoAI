@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+firebase-admin
+PyPDF2
+python-dotenv
+pydantic 
+google-genai
+markdown2
+xhtml2pdf
