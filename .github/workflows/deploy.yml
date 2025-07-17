@@ -32,11 +32,15 @@ jobs:
           push: true
           tags: ${{ env.IMAGE_NAME }}
 
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
       - name: Set up Google Cloud SDK
         uses: google-github-actions/setup-gcloud@v2
         with:
           project_id: ${{ secrets.GCP_PROJECT_ID }}
-          service_account_key: ${{ secrets.GCP_SA_KEY }}
 
       - name: Deploy to Cloud Run
         run: |
@@ -45,4 +49,5 @@ jobs:
             --platform managed \
             --region europe-west1 \
             --allow-unauthenticated \
-            --set-env-vars FIREBASE_STORAGE_BUCKET=${{ secrets.FIREBASE_STORAGE_BUCKET }},GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}
+            --set-env-vars FIREBASE_STORAGE_BUCKET=${{ secrets.FIREBASE_STORAGE_BUCKET }},GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }} \
+            --update-secrets=GOOGLE_APPLICATION_CREDENTIALS=firebase-adminsdk-key:latest
