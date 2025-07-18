@@ -49,5 +49,5 @@ jobs:
             --platform managed \
             --region europe-west1 \
             --allow-unauthenticated \
-            --set-env-vars FIREBASE_STORAGE_BUCKET=${{ secrets.FIREBASE_STORAGE_BUCKET }},GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }} \
-            --update-secrets=GOOGLE_APPLICATION_CREDENTIALS=firebase-adminsdk-key:latest
+            --set-env-vars FIREBASE_STORAGE_BUCKET=${{ secrets.FIREBASE_STORAGE_BUCKET }},GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }},GOOGLE_APPLICATION_CREDENTIALS=/secrets/firebase-adminsdk-key.json \
+            --mount-secrets /secrets/firebase-adminsdk-key=firebase-adminsdk-key:latest
