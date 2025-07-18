@@ -4,6 +4,9 @@ import os
 from dotenv import load_dotenv
 from pathlib import Path
 
+print("GOOGLE_APPLICATION_CREDENTIALS:", os.environ.get("GOOGLE_APPLICATION_CREDENTIALS"))
+print("File exists:", os.path.exists(os.environ.get("GOOGLE_APPLICATION_CREDENTIALS", "")))
+
 env_path = Path(__file__).resolve().parent.parent.parent / '.env'
 load_dotenv(dotenv_path=env_path) # Explicitly load the .env file
 
