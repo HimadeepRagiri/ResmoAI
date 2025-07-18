@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+ 
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+ 
+    --primary: 256 94% 61%;
+    --primary-foreground: 0 0% 98%;
+ 
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+ 
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+ 
+    --accent: 261 82% 57%;
+    --accent-foreground: 0 0% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 256 94% 61%;
+ 
+    --radius: 1rem;
+  }
+ 
+  .dark {
+    --background: 233 100% 4%; /* #0D0D0D base */
+    --foreground: 210 40% 98%; /* #F3F4F6 */
+
+    --card: 240 10% 12%; /* #1F1F1F */
+    --card-foreground: 210 40% 98%;
+ 
+    --popover: 240 10% 4%;
+    --popover-foreground: 210 40% 98%;
+ 
+    --primary: 256 84% 61%; /* #7C3AED */
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 240 5% 15%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --muted: 240 5% 15%;
+    --muted-foreground: 215 20% 65%; /* #9CA3AF */
+ 
+    --accent: 271 81% 57%; /* #9333EA */
+    --accent-foreground: 210 40% 98%;
+ 
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 4% 18%;
+    --input: 240 4% 18%;
+    --ring: 256 84% 61%;
+ 
+    --radius: 1rem;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-color: #0D0D0D;
+    background-image: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(124, 58, 237, 0.3), transparent),
+                      radial-gradient(ellipse 80% 80% at 50% 120%, rgba(147, 51, 234, 0.2), transparent);
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .glow-border-violet {
+    border-color: transparent;
+    box-shadow: 0 0 0 1px hsl(var(--primary) / 0.5), 0 0 10px hsl(var(--primary) / 0.2);
+  }
+  .glow-border-purple {
+    border-color: transparent;
+    box-shadow: 0 0 0 1px hsl(var(--accent) / 0.5), 0 0 10px hsl(var(--accent) / 0.2);
+  }
+  .text-glow {
+    text-shadow: 0 0 8px hsl(var(--primary) / 0.5);
+  }
+}
