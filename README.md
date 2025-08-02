@@ -360,7 +360,7 @@ backend/
 
 ## Security Best Practices
 - **Never commit secrets or `.env.local` to GitHub.**
-- Use GitHub Actions secrets for all sensitive variables.
+- Always use GitHub Actions secrets for all sensitive variables.
 - Restrict CORS origins to your production domains in production.
 - Use IAM roles and least privilege for GCP service accounts.
 - Regularly rotate API keys and service account credentials.
