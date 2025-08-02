@@ -1,6 +1,18 @@
 # ResmoAI
 
-Unlock More Interviews with an ATS-Optimized PDF Resume
+**Unlock More Interviews with an ATS-Optimized PDF Resume**
+
+[![Next.js](https://img.shields.io/badge/Next.js-15.3+-000?style=flat&logo=nextdotjs)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5+-3178C6?style=flat&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3+-38BDF8?style=flat&logo=tailwindcss)](https://tailwindcss.com/)
+[![Firebase](https://img.shields.io/badge/Firebase-Auth%2C%20Firestore%2C%20Storage-FFCA28?style=flat&logo=firebase)](https://firebase.google.com/)
+[![Google Cloud Run](https://img.shields.io/badge/Google%20Cloud%20Run-Backend-4285F4?style=flat&logo=googlecloud)](https://cloud.google.com/run)
+[![FastAPI](https://img.shields.io/badge/FastAPI-Python-009688?style=flat&logo=fastapi)](https://fastapi.tiangolo.com/)
+[![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?style=flat&logo=docker)](https://www.docker.com/)
+[![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-CI%2FCD-2088FF?style=flat&logo=githubactions)](https://github.com/features/actions)
+[![Gemini API](https://img.shields.io/badge/Gemini%20API-AI%20Integration-FF6F00?style=flat)](https://ai.google.dev/gemini-api)
+
+---
 
 ResmoAI is a full-stack, production-grade web application that leverages AI to help users analyze, optimize, and generate professional, ATS-friendly PDF resumes. The platform is built with a modern tech stack, including Next.js for the frontend, FastAPI for the backend, Firebase for authentication, database and storage, and Google Cloud Run for scalable backend deployment. CI/CD is fully automated with GitHub Actions.
 
